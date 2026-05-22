@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nusantara Tycoon</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="setupOverlay" class="setup-overlay" aria-label="Setup pemain">
+      <form id="setupForm" class="setup-dialog">
+        <div class="setup-copy">
+          <p class="eyebrow">Nusantara Tycoon</p>
+          <h1>Siapkan Pemain</h1>
+          <p>Pilih jumlah pemain, isi nama, lalu tentukan logo pion dari folder icon.</p>
+        </div>
+
+        <label class="player-count-control">
+          <span>Jumlah Pemain</span>
+          <select id="playerCountSelect">
+            <option value="2">2 Pemain</option>
+            <option value="3">3 Pemain</option>
+            <option value="4" selected>4 Pemain</option>
+          </select>
+        </label>
+
+        <div id="setupPlayers" class="setup-players"></div>
+
+        <button class="start-action" type="submit">Mulai Permainan</button>
+      </form>
+    </section>
+
+    <div id="turnNotification" class="turn-notification" role="status" aria-live="polite"></div>
+
+    <main class="game-shell">
+      <section class="board-stage" aria-label="Papan permainan Nusantara Tycoon">
+        <canvas id="boardCanvas" width="1100" height="1100"></canvas>
+        <div class="center-panel">
+          <p class="eyebrow">Nusantara Tycoon</p>
+          <h1>Bangun Nusantara, Kuasai Ekonomi Indonesia.</h1>
+          <div class="dice-box">
+            <button id="rollButton" class="primary-action" type="button">Lempar Dadu</button>
+            <button id="endTurnButton" class="secondary-action" type="button">Selesai</button>
+            <div class="dice" id="diceValue">2</div>
+          </div>
+          <div class="turn-summary">
+            <span id="currentPlayerName">Ayu</span>
+            <strong id="currentPlayerCash">Rp15.000.000</strong>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="panel-section">
+          <div class="section-title">
+            <h2>Pemain</h2>
+            <button id="newGameButton" class="ghost-action" type="button">Reset</button>
+          </div>
+          <div id="playersList" class="players-list"></div>
+        </section>
+
+        <section class="panel-section active-tile">
+          <h2>Lokasi Aktif</h2>
+          <div id="tileDetails" class="tile-details"></div>
+          <div class="tile-actions">
+            <button id="buyButton" type="button">Beli Aset</button>
+            <button id="upgradeButton" type="button">Upgrade</button>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <h2>Event Nasional</h2>
+          <div id="eventCard" class="event-card">
+            <span>Belum ada event.</span>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <h2>Log Permainan</h2>
+          <ol id="gameLog" class="game-log"></ol>
+        </section>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

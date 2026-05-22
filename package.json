@@ -1,0 +1,19 @@
+{
+  "name": "nusantara-tycoon",
+  "version": "0.1.0",
+  "description": "Prototype board game digital bertema ekonomi Nusantara.",
+  "private": true,
+  "scripts": {
+    "check": "node --check app.js",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "board-game",
+    "monopoly",
+    "indonesia",
+    "nusantara",
+    "canvas-game"
+  ],
+  "author": "duniamaya98",
+  "license": "MIT"
+}
