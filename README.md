@@ -1,5 +1,7 @@
 # Nusantara Tycoon
 
+Board game with Indonesian Theme.
+
 **Nusantara Tycoon** adalah prototype board game digital bertema Indonesia yang terinspirasi dari mekanik Monopoly, dengan sistem kota, wisata, infrastruktur, sumber daya alam, pajak, penjara, bebas parkir, event nasional, dan karakter pemain.
 
 ## Fitur
@@ -35,12 +37,12 @@ Lalu buka URL yang ditampilkan di terminal.
 
 ```txt
 .
-├── index.html
-├── styles.css
-├── app.js
-├── icon/
-├── package.json
-└── README.md
+|-- index.html
+|-- styles.css
+|-- app.js
+|-- icon/
+|-- package.json
+`-- README.md
 ```
 
 ## Deploy ke GitHub Pages
